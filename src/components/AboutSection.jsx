@@ -1,6 +1,8 @@
+import { FileText } from "lucide-react"
 import Button from "./ui/Button"
 
 const AboutSection = () => {
+   const resumeLink = "https://drive.google.com/file/d/1auINaGv7-YxMax_zQSqqgHhxD36yJnye/view?usp=drive_link"
   return (
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
       <div className="order-2 lg:order-1">
@@ -8,6 +10,10 @@ const AboutSection = () => {
           Hi, I'm <span className="text-primary">Krushal Lamba</span>
         </h1>
         <h2 className="text-2xl font-semibold mb-6">Full Stack Developer</h2>
+        {/* <Button variant="outline" asChild className="block md:hidden">
+                <FileText className="h-4 w-4" />
+                <a href={resumeLink} target="_blank" rel="noopener noreferrer">Resume</a>
+        </Button> */}
         <p className="text-muted-foreground mb-6">
           I'm a passionate Full-Stack Developer specializing in the MERN stack with hands-on experience in building dynamic and responsive web applications.
           With a strong foundation in modern JavaScript frameworks and a keen eye for design, I strive to build seamless

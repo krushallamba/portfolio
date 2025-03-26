@@ -40,9 +40,7 @@ const Navbar = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/95 backdrop-blur-sm shadow-md" : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-50 transition-all duration-300 bg-background shadow-md `}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
@@ -73,20 +71,17 @@ const Navbar = () => {
               </Button>
             </a>
 
-            {/* Theme Toggle */}
             <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
               {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
           </nav>
 
-          {/* Mobile Menu Button and Theme Toggle */}
           <div className="md:hidden flex items-center gap-2">
-            {/* Theme Toggle */}
+            
             <Button variant="ghost" size="icon" onClick={toggleTheme} aria-label="Toggle theme">
               {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </Button>
 
-            {/* Hamburger Menu Button */}
             <Button variant="ghost" size="icon" onClick={toggleMenu} aria-label="Toggle menu">
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </Button>
@@ -100,7 +95,7 @@ const Navbar = () => {
           isMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Close Button */}
+        
         <Button
           variant="ghost"
           size="icon"
@@ -111,7 +106,7 @@ const Navbar = () => {
           <X className="h-6 w-6" />
         </Button>
 
-        <div className="flex flex-col h-full pt-20 px-4 space-y-6 text-center">
+        <div className="flex flex-col h-full pt-20 px-4 space-y-6 text-center bg-background">
           <a href="#about" onClick={closeMenu} className="text-lg font-medium py-2 hover:text-primary">
             About Me
           </a>
